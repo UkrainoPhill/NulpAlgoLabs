@@ -1,5 +1,5 @@
 import unittest
-from Labs.src.lab1_3_2 import find_unsorted_part
+from src.lab1_3_2 import find_unsorted_part
 
 
 class TestUnsortedPart(unittest.TestCase):
