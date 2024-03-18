@@ -12,6 +12,14 @@ class TestBalancedTree(unittest.TestCase):
         result = balanced_tree(root)
         self.assertEqual(result, True)
 
+    def test_root_tree(self):
+        root = BinaryTree(1)
+        result = balanced_tree(root)
+        self.assertEqual(result, True)
+
+    def test_empty_tree(self):
+        result = balanced_tree(None)
+        self.assertEqual(result, True)
 
 if __name__ == '__main__':
     unittest.main()
