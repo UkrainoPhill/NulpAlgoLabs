@@ -34,6 +34,10 @@ class TestFindLongestPick(unittest.TestCase):
 
         self.assertEqual(tree.root.left.value, 11)
 
+    def test_empty_tree(self):
+        tree = BinaryTree()
+        self.assertEqual(tree.is_root_none_pop(), None)
+
 
 if __name__ == "__main__":
     unittest.main()
