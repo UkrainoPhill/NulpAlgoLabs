@@ -30,7 +30,6 @@ def get_path(previous_vertex, start_p):
 
 
 def find_the_shortest_safe_route_in_sensor_field(matrix):
-    print(matrix)
     shortest_route = float("inf")
     for i in range(len(matrix)):
         if matrix[i][0] == 1:
