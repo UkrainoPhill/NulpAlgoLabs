@@ -21,6 +21,12 @@ class MyTestCase(unittest.TestCase):
             output = output_file.read()
         self.assertEqual(int(output), 10)
 
+    def test_zeros(self):
+        result = main("../test/resources/input_zero.txt", "../test/resources/output_zero.txt")
+        with open("../test/resources/output_zero.txt") as output_file:
+            output = output_file.read()
+        self.assertEqual(int(output), -1)
+
 
 if __name__ == '__main__':
     unittest.main()
