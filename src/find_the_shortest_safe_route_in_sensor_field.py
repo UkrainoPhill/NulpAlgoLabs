@@ -7,6 +7,7 @@ def read_input(input_directory):
     return matrix
 
 
+
 def check_for_zeros(matrix, row_number, column_number):
     for row, column in [(0, 1), (1, 0), (0, -1), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]:
         if (0 <= row_number + row < len(matrix)
@@ -71,4 +72,3 @@ def main(input_directory, output_directory):
     matrix = read_input(input_directory)
     shortest_route = find_the_shortest_safe_route_in_sensor_field(matrix)
     write_output(output_directory, shortest_route)
-
