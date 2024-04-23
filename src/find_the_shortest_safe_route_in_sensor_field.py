@@ -4,13 +4,13 @@ def read_input(input_directory):
         for line in input_file:
             row = list(map(int, line.split(", ")))
             matrix.append(row)
-        print(matrix)
-    return matrix
 
 
 def check_for_zeros(matrix, row_number, column_number):
-    for row, column in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
-        if 0 <= row_number + row < len(matrix) and 0 <= column_number + column < len(matrix[0]) and matrix[row_number + row][column_number + column] == 0:
+    for row, column in [(0, 1), (1, 0), (0, -1), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)]:
+        if (0 <= row_number + row < len(matrix)
+                and 0 <= column_number + column < len(matrix[0])
+                and matrix[row_number + row][column_number + column] == 0):
             return True
     return False
 
@@ -55,7 +55,12 @@ def bfs(start_p, matrix):
         for row, col in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
             new_row = current_vertex[0] + row
             new_col = current_vertex[1] + col
-            if 0 <= new_row < len(matrix) and 0 <= new_col < len(matrix[0]) and matrix[new_row][new_col] == 1 and (new_row, new_col) not in visited and not check_for_zeros(matrix, new_row, new_col):
+            if (0 <= new_row < len(matrix)
+                    and 0 <= new_col < len(matrix[0])
+                    and matrix[new_row][new_col] == 1
+                    and (new_row, new_col) not in visited
+                    and not check_for_zeros(matrix, new_row, new_col)):
+
                 queue.append((new_row, new_col))
                 previous_vertex[(new_row, new_col)] = current_vertex
 
@@ -66,6 +71,3 @@ def main(input_directory, output_directory):
     matrix = read_input(input_directory)
     shortest_route = find_the_shortest_safe_route_in_sensor_field(matrix)
     write_output(output_directory, shortest_route)
-
-
-main("../test/resources/input.txt", "../test/resources/output.txt")
