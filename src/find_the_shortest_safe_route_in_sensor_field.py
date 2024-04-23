@@ -4,7 +4,6 @@ def read_input(input_directory):
         for line in input_file:
             row = list(map(int, line.split(", ")))
             matrix.append(row)
-    return matrix
 
 
 def check_for_zeros(matrix, row_number, column_number):
@@ -61,6 +60,7 @@ def bfs(start_p, matrix):
                     and matrix[new_row][new_col] == 1
                     and (new_row, new_col) not in visited
                     and not check_for_zeros(matrix, new_row, new_col)):
+
                 queue.append((new_row, new_col))
                 previous_vertex[(new_row, new_col)] = current_vertex
 
@@ -71,4 +71,3 @@ def main(input_directory, output_directory):
     matrix = read_input(input_directory)
     shortest_route = find_the_shortest_safe_route_in_sensor_field(matrix)
     write_output(output_directory, shortest_route)
-
