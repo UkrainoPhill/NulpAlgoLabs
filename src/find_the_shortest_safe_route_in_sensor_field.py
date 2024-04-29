@@ -4,6 +4,8 @@ def read_input(input_directory):
         for line in input_file:
             row = list(map(int, line.split(", ")))
             matrix.append(row)
+    return matrix
+
 
 
 def check_for_zeros(matrix, row_number, column_number):
@@ -60,7 +62,6 @@ def bfs(start_p, matrix):
                     and matrix[new_row][new_col] == 1
                     and (new_row, new_col) not in visited
                     and not check_for_zeros(matrix, new_row, new_col)):
-
                 queue.append((new_row, new_col))
                 previous_vertex[(new_row, new_col)] = current_vertex
 
