@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.find_the_shortest_safe_route_in_sensor_field import *
+from src.find_the_shortest_safe_route_in_sensor_field import *
 
 
 class MyTestCase(unittest.TestCase):

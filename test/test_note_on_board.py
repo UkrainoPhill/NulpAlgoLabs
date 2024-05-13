@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.note_on_board import put_on_board
+from src.note_on_board import put_on_board
 
 
 class TestPutOnBoard(unittest.TestCase):
