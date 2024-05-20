@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.unsorted_part import find_unsorted_part
+from src.unsorted_part import find_unsorted_part
 
 
 class TestUnsortedPart(unittest.TestCase):

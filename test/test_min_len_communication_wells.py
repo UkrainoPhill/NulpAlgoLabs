@@ -1,10 +1,11 @@
 import unittest
-from NulpAlgoLabs.src.min_len_communication_wells import *
+from src.min_len_communication_wells import *
 
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):
-        graph = kruskal(read_input('resources/communication_wells.csv'))
+        file = "resources/communication_wells.csv"
+        graph = kruskal(read_input(file))
         self.assertEqual(graph, 37)
 
     def test_multi_graph(self):

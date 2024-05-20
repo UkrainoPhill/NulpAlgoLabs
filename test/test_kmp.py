@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.kmp import *
+from src.kmp import *
 
 
 class MyTestCase(unittest.TestCase):

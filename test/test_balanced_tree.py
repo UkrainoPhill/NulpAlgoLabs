@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.balanced_tree import *
+from src.balanced_tree import *
 
 
 class TestBalancedTree(unittest.TestCase):

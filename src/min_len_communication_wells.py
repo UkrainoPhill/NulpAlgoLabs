@@ -47,7 +47,6 @@ def union(well1: str, well2: str, parents: Dict[str, str], rank: Dict[str, int])
     :param rank: dict str: int, dictionary where key is well name and value is rank of this well. Example: {'K1': 0}
     :return: None, we untie two wells depending on their rank, which is higher we attach to the lower
     """
-    print(parents, rank)
     root1 = find(well1, parents)
     root2 = find(well2, parents)
     if root1 != root2:

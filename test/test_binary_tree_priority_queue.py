@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.binary_tree_priority_queue import *
+from src.binary_tree_priority_queue import *
 
 
 class TestFindLongestPick(unittest.TestCase):

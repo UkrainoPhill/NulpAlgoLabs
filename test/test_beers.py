@@ -1,5 +1,5 @@
 import unittest
-from NulpAlgoLabs.src.beers import *
+from src.beers import *
 
 
 class MyTestCase(unittest.TestCase):
